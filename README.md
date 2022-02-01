@@ -1,4 +1,4 @@
-# 《前哨》月刊
+# 《前哨》
 
 投稿：`leningrad3rdprinting@outlook.com`
 
