@@ -4,6 +4,6 @@
 
 投稿：`leningrad3rdprinting@outlook.com`
 
-第一期：
+第一期·创刊号：
 
 `下载链接：敬请期待`
