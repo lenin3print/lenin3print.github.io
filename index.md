@@ -1,4 +1,6 @@
-# 《前哨》
+# 列宁格勒印刷三厂工人理论小组
+
+## 《前哨》
 
 投稿：`leningrad3rdprinting@outlook.com`
 
