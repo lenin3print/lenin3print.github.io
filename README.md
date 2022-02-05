@@ -2,7 +2,15 @@
 
 ## 《前哨》
 
-投稿：`leningrad3rdprinting@protonmail.com`;`leningrad3rdprinting@tunanota.com`
+投稿：
+
+```
+
+leningrad3rdprinting@protonmail.com
+
+leningrad3rdprinting@tunanota.com
+
+```
 
 ---
 
