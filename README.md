@@ -1,19 +1,18 @@
 # 列宁格勒印刷三厂工人理论小组
 
-## 《前哨》
+## 《前哨》月刊
 
 投稿：
 
 ```
 leningrad3rdprinting@protonmail.com
-
 leningrad3rdprinting@tunanota.com
 ```
 
 ---
 
 ```
-第一期.pdf
+最新：第一期.pdf
 ```
 
 下载链接：
