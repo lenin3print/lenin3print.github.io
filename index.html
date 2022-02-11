@@ -9,6 +9,13 @@
 </head>
 <body class="mdui-theme-primary-red">
 
+<script>
+var ua = navigator.userAgent.toLowerCase();
+if (/mobile|android|iphone|ipad|phone/i.test(us)) {
+window.location.href="https://lenin3print.github.io/test.html"
+}
+</script>
+
 <div class="mdui-appbar mdui-appbar-scroll-toolbar-hide">
     <div class="mdui-toolbar mdui-color-red">
         <a href="https://github.com/lenin3print" target="_blank" class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-tooltip="{content: '查看 Github'}">
@@ -22,12 +29,9 @@
   </div>
 
 
-  <div class="mdui-container" style="column-count: 3; column-gap: 10px; padding: 10px">
+  <div class="mdui-container" id="main" style="column-count: 3; column-gap: 10px; padding: 10px">
 
   
-
-
-
       <div style="break-inside: avoid">
         <div class="mdui-card" style="margin-top: 10px">
           <div class="mdui-card-media">
@@ -129,6 +133,8 @@
 
 
 </div>
+
+
 
 
  <script src="https://cdn.jsdelivr.net/npm/mdui@1.0.2/dist/js/mdui.min.js"></script>
