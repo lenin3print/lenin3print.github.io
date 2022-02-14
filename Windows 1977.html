@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="zh-cmn-Hans">
+  <head>
+    <link rel="shortcut icon" href="https://lenin3print.github.io/favicon.ico" type="image/x-icon" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"/>
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>Windows 1977</title>
+        <style>
+:root {
+  font-family: monospace;
+  font-size: 15px;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #0D7073;
+}
+
+body::after {
+  content: 'Windows\A\A 1977';
+  white-space: pre;
+  display: block;
+  min-height: 100vh;
+  color: #fff;
+  font-size: 30vh;
+  opacity: .1;
+  z-index: -1;
+  text-align: center;
+  position: fixed;
+}
+
+.prompt {
+  position: absolute;
+  width: 300px;
+  height: 142px;
+  background-color: #BFBFBF;
+  padding: 1px;
+}
+
+.title {
+  background-color: #00007F;
+  color: #fff;
+  padding: 3px 4px;
+  cursor: move;
+  box-sizing: border-box;
+  width: calc(100% - 2px);
+}
+
+.prompt::before,
+.prompt::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: inherit;
+  height: inherit;
+  border: 2px solid;
+  border-color: #DFDFDF #000 #000 #DFDFDF;
+  left: -2px;
+  top: -2px;
+  pointer-events: none;
+}
+
+.promot::after {
+  border: 1px solid #fff;
+  border-color: #fff #7f7f7f #7f7f7f #fff;
+  left: -1px;
+  top: -1px;
+}
+
+.message {
+  margin-top: 15px;
+  height: 100px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+button {
+  position: relative;
+  font-family: inherit;
+  width: 120px;
+  height: 24px;
+  background-color: #BFBFBF;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  pointer-events: none;
+}
+
+button::before,
+button::after {
+  position: absolute;
+  content: '';
+  display: block;
+  width: inherit;
+  height: inherit;
+  border-width: 2px 3px 3px 2px;
+  border-style: solid;
+  border-color: #DFDFDF #000 #000 #DFDFDF;
+  left: -2px;
+  top: -2px;
+}
+
+button::after {
+  border: 1px solid #fff;
+  border-color: #fff #7f7f7f #7f7f7f #fff;
+  left: -1px;
+  top: -1px;
+}
+        </style>
+  </head>
+  <body>
+    <div id="primary" class="prompt">
+        <div class="title">英明领袖华主席发动政变之后提醒您</div>
+        <div class="message">
+            “要光明正大，不要搞阴谋诡计”。
+                    <button>
+            <span>确定</span>
+          </button>
+        </div>
+      </div>
+
+<script>
+let mousedown = false;
+let offset = {
+  top: 0,
+  left: 0,
+};
+const primary = document.querySelector('#primary');
+
+document.querySelector('#primary .title').addEventListener('mousedown', (e) => {
+  mousedown = true;
+  
+  let bounding = e.target.getBoundingClientRect();
+  
+  offset.left = e.clientX - bounding.left;
+  offset.top = e.clientY - bounding.top;
+});
+
+window.addEventListener('mousemove', debounce(duplicate, 10));
+
+function duplicate(e) {
+  if (mousedown) {
+    primary.style.left = `${e.clientX - offset.left}px`;
+    primary.style.top = `${e.clientY - offset.top}px`;
+    
+    let clone = primary.cloneNode(true);
+    clone.removeAttribute('id');
+    document.body.appendChild(clone);
+  }
+}
+
+window.addEventListener('mouseup', (e) => {
+  mousedown = false;
+})
+
+function debounce(func, timeout = 100) {
+  let timer;
+  return (...args) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      func.apply(this, args);
+    }, timeout);
+  }
+}
+    </Script>
+
+  </body>
+</html>
